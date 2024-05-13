@@ -90,7 +90,16 @@ Inferences are instructured hypotheses that gathered from several sources and ex
 
 # Use tools to optimize Power BI performance
 
+# Understand performance using performance analyzer
 
+The **Performance analyzer** displays and records logs that measure how each of your report elements performs when users interact with them. You can also see which aspects of their performance are most(
+or least) resource intensive.
 
+Major subsystems involved in executing a Power BI report:
 
+- **Report Canvas** - provides the user interaface for Power BI reports including hosting visuals and filters, managing user interactions for consuming and authoring reports and retrieving data for display. The **Report Canvas** is written using web technologies and runs in web browsers or web browser component. The **Report Canvas** retrieves data using a high-level, internal, Power BI query known as *Semantic Query*
+
+- **Data Shape Engine** - evaluates Semantic Queries by generating and running one, or more DAX queries against a data model hosted inside Power BI, Power BI Desktop, Azure Analysis Services, or SQL Server Analysis Services.
+
+- **Data Model Engine** -  stores the data model and provides services to reports, such as DAX query evaluation.
 
