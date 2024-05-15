@@ -14,7 +14,7 @@ Power BI can scale from simple reports using a single ata source to reports requ
 
 # Building blocks of Power BI
 
-The building blocks of Power BI are **semantic models** and **visualizations**. Create and sementic model and then use visuals to build a report.
+The building blocks of Power BI are **semantic models** and **visualizations**. Create a sementic model and then use visuals to build a report.
 
 # Create a sementic model
 
