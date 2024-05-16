@@ -108,35 +108,59 @@ Major subsystems involved in executing a Power BI report:
 
 In **Power BI**, the term *content* refers to apps, dashboards, and reports.  
 
-# Get and transform data with Power BI
 
+# Optimize Performance in Power Query
 
+**Power Query** takes advantage of good performance atthe data source through a *Query folding* technique.
 
+**Query folding** is the process by which the transformations and edits that you make in Power Query Editor are simultaneously tracked as native queries, or simple Select SQL statements, while you're actively making transformations.
 
+**Query diagnostics** is another tool that can be used to study query performance.
 
+# Resolve data import errors
 
+# Power BI Query Error: Timeout expired
 
+The error indicates that too much data has been pulled according to the organization's policies. The error can be resolved by pulling fewer columns or rows from a single table.
 
+# We couldn't find any data formatted as a table
 
+Self-explanatory error.
 
+- Open your Excel workbook, and highlight the data that you want to import.
+- Press the **Ctrl-T** keyboard shortcut. The first row will likely be column headers.
+- Verify that the column headers reflect how you want to name your columns. Then, try to import data from Excel again.It should work.
 
+# Data type errors
 
+It occurs because of an error in interpreting the data type in Power BI.
 
+Instead of using this query *SELECT CustomerPostalCode FROM Sales.Customers*
 
+Use this query : *SELECT CAST(CustomerPostalCode as varchar(10)) FROM Sales.Customers*
 
+By specifying the correct type at the data source, it eliminates many of the common data source errors.
 
+# Clean, Transform, and Load Data in Power BI
 
+Advantages of clean data:
 
+- Measures and columns produce more accurate results when they perform aggregations and calculations.
+- Tables are organized, where users can find the data in an intuitive manner.
+- Duplicates are removed, making data navigation simpler. It will also produce columns that be used in slicers and filters.
+- A complicated column can be slit into two, simpler columns. Multiple columns can be combined into one column for readability.
+- Codes and integers can be replaces with human readable values.
 
+# Profile data in Power BI
 
+Profiling data is about studying the nuances of data: determinig anomalies, examining and developing the underlying data structures, and querying data statistics such as row counts, value distributions minimum and maximum values, averages etc.
 
+# Find data anomalies and data statistics
 
+**Column distribution** show the distribution of data within the column and the counts of distinct and unique values, both of which can tell details about the counts.
+**Column profile** gives a more in-depth look into the statistics within the columns for the first 1000 rows of data.
 
-
-
-
-
-
+# Describe Power BI Desktop Models
 
 
 
