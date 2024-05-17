@@ -175,20 +175,35 @@ An analytic query has three phases that are implemented in the following order:
   - **Group/Grouping or dicing** - divides query results into groups.
   - **Summarize/Summarizing** produces single value result. Typically, numeric columns are summarized by using summarization methods(sum, count etc)
 
+*Fields* is a collective term that is used to describe a model resource *that can be used to configure a visual*. The three model resources that are fields include:
+- Columns
+- Hierarchy levels
+- Measures
+
+**Columns** are used to filter, group, and summarize column values.
+**Hierarchy levels** are based on columns, they can be used filter and group but not summarize. Report authors can summarize the column that the hierarchy level is based on, provided that it's visible in the **Fields** pane.
+
+**Measures** are designed to summarize model dat; they can't be used to group data. Measures can be used to filter data in one special case: to use a measure to filter a visual when the visual 
 
 
 
+# Describe Power BI model fundamentals
+
+**Data model** is a query-able data resource that's optimized for analytics.
+
+**Analytic query** provides a query result from a model that's easy for a person to understand especially when visualized. Analytic query has 3 phases that are executed in this order Filter, Group, Summarize.
+
+**Tabular model** A Power BI model is a tabular model. A tabular model comprises one or more tables of columns. It can also include relations, hierarchies and calculations.
+
+**Star schema design** is highly recommended an optimized and easy-to-use tabular model. Star design is a mature modeling widely adopted by relational data warehouse. It requires you to classify model tables as either dimension or fact. Dimension tables describe busines entities; the things you model.
+
+**Table storage mode** is model in Power BI. The storage mode property can be either **Import, DirectQuery** or **Dual** and it determines whether table data is stored in the model.
+- **Import**  Queries retrieve data that's stored, or cached, in the model.
+- **DirectQuery** - Queries pass through to the data source.
+- **Dual** - Queries retrieve stored data or pass through to the data source. Power BI determines the most effient plan, striving to use cached data whenever possible.
 
 
-
-
-
-
-
-
-
-
-
+# DESIGN A SEMANTIC MODEL IN POWER BI
 
 
 
