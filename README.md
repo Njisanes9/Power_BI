@@ -160,11 +160,20 @@ Profiling data is about studying the nuances of data: determinig anomalies, exam
 **Column distribution** show the distribution of data within the column and the counts of distinct and unique values, both of which can tell details about the counts.
 **Column profile** gives a more in-depth look into the statistics within the columns for the first 1000 rows of data.
 
-# Describe Power BI Desktop Models
+# Model Data With Power BI
 
+**Star schema design** refers to a design approach that's commonly used by relational data warehouse designers because it represents a user-friendly structure and it supports high-performance analytic queries. It is called a **star schema** because it classifies model tables as either *fact* or *dimension*. In a diagram, a fact table forms center of a star, while dimension tables, when placed around a fact table, represent the points of a star.
 
+**Fact tables** has role to store an accumulation of rows that represent observations or events that record a specific business activity. Fact tables contain numerous rows.
 
+**Dimension tables** describe business entities, which commonly represent people, places, products, or concepts. The columns in dimension tables allow filtering and grouping of fact table data. Each **dimension table** must have a unique column, which is referred to as its key column. A unique column doesn't contain duplicate values and it should never have missing values.
 
+**Analytic query** is a query that produces a result from a semantic model. Each Power BI visual, in the background, submits an analytic query to Power BI to query the model. The analytic query is written as a Data Analysis Expression(DAX) query statement. You don't need to write a native DAX statement; you only need to configure report visuals by mapping semantic model fields. 
+
+An analytic query has three phases that are implemented in the following order:
+  - **Filter/Filtering or slicing** - targets the data of relevance. In Power BI reports, filters can be applied to three different scopes: entire report, a specidic page, or a specific visual.
+  - **Group/Grouping or dicing** - divides query results into groups.
+  - **Summarize/Summarizing** produces single value result. Typically, numeric columns are summarized by using summarization methods(sum, count etc)
 
 
 
